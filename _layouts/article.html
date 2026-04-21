@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<header class="post-hero" {% if page.hero_image %}style="background-image:url('{{ page.hero_image | relative_url }}');"
+  {% endif %}>
+  <div class="post-hero__inner">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="post-hero__subtitle">{{ page.subtitle }}</p>{% endif %}
+    <div class="post-hero__meta">
+      <span>{{ page.date | date: "%B %Y" }}</span>
+      {% if page.context %}<span>&middot; {{ page.context }}</span>{% endif %}
+      {% for t in page.tags %}<span class="tag-chip"
+        style="background:rgba(255,255,255,0.15); color:#FFFFFF; border-color:rgba(255,255,255,0.35);">{{
+        t }}</span>{% endfor %}
+    </div>
+  </div>
+</header>
+
+<article class="post-body">
+  <a class="back-link" href="{{ '/' | relative_url }}">&larr; All articles</a>
+  {{ content }}
+</article>
+
+<div id="lightbox" class="lightbox" hidden>
+  <img id="lightbox-img" alt="">
+</div>
+
+<script>
+  (function () {
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightbox-img');
+    var imgs = document.querySelectorAll('.post-body img');
+    imgs.forEach(function (img) {
+      if (img.closest('.li-card') || img.closest('.linkedin-cards')) return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function () {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt || '';
+        lb.hidden = false;
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function close() {
+      lb.hidden = true;
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
+</script>
