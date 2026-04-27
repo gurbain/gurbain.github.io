@@ -7,7 +7,7 @@ category: PhD
 sectors: [Academic]
 tags: [Robotics, Legged Robots, Compliant Robotics, Neurorobotics, Embedded Linux, ROS, Python, Gazebo/MuJoCo/Isaac, Inverse Kinematics]
 thumbnail: /img/tigrillo/thumb.jpg
-hero_image: /img/tigrillo/hero.png
+hero_image: /img/tigrillo/hero.jpg
 ---
 
 ## A small compliant quadruped for brain-inspired control

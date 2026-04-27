@@ -7,7 +7,7 @@ category: Student
 sectors: [Cultural, Academic]
 tags: [Audio Processing, Machine Learning, C/C++, CUDA]
 thumbnail: /img/sonixcycle/sonixcycle1.png
-hero_image: /img/sonixcycle/hero.png
+hero_image: /img/sonixcycle/hero.jpg
 ---
 
 ## A search problem for sound designers

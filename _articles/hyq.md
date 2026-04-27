@@ -6,8 +6,8 @@ context: Ghent University &mdash; IIT &mdash; HBP
 category: PhD
 sectors: [Academic]
 tags: [Robotics, Legged Robots, Compliant Robotics, Neurorobotics, Machine Learning, Reinforcement Learning, Docker, ROS, Python, C/C++, Gazebo/MuJoCo/Isaac, TensorFlow, ML Control Policy, Model Predictive Control]
-thumbnail: /img/hyq/hero.png
-hero_image: /img/hyq/hero.png
+thumbnail: /img/hyq/hero.jpg
+hero_image: /img/hyq/hero.jpg
 mathjax: true
 ---
 

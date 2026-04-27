@@ -7,7 +7,7 @@ category: Student
 sectors: [Aerospace, Academic]
 tags: [Machine Vision, Embedded Linux, Camera Hardware, Navigation, C/C++, Gazebo/MuJoCo/Isaac]
 thumbnail: /img/halo/inspect3.png
-hero_image: /img/halo/hero.png
+hero_image: /img/halo/hero.jpg
 mathjax: true
 ---
 

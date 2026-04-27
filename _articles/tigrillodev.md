@@ -7,7 +7,7 @@ category: PhD
 sectors: [Academic]
 tags: [Robotics, Legged Robots, Compliant Robotics, Embedded Linux, Electromechanics]
 thumbnail: /img/tigrillo/electrical_schema.png
-hero_image: /img/tigrillo/hero.png
+hero_image: /img/tigrillo/hero.jpg
 ---
 
 ## Companion post
