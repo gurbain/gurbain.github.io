@@ -1,10 +1,11 @@
 ---
-title: "Eriksbo: an autonomous spraying robot"
+title: "Eriksbo, an autonomous spraying robot"
 subtitle: 15 km of plant borders, ecological herbicides, and a robot that sprays only where it needs to.
 date: 2024-01-01
 context: Exobotic Technologies
 category: Exobotic
-tags: [Robotics, AGV, Navigation, Machine Vision, Embedded Linux, ROS, Docker, Python, C/C++]
+sectors: [Agriculture]
+tags: [Robotics, AGV, Navigation, Machine Vision, Embedded Linux, ROS, Docker, Python, C/C++, PyTorch, Gazebo/MuJoCo/Isaac, Model Predictive Control]
 thumbnail: /img/exobotic/eriksbo/aerial.jpg
 hero_image: /img/exobotic/eriksbo/aerial.jpg
 ---
@@ -47,3 +48,13 @@ Further reading:
 - Exobotic project page: [Eriksbo spraying robot](https://www.exobotic.com/solutions/blog-post-eriksbo-spraying-robot).
 - Visual-navigation upgrade: [Exobotic on LinkedIn](https://www.linkedin.com/posts/exobotictec_agtech-ai-robotics-activity-7293653495197368320-DgIv/).
 - Weed-detection partner: [ILVO](https://ilvo.vlaanderen.be/).
+
+## Sources
+
+This article only summarises information already publicly available. Pictures and quoted content come from:
+
+- [exobotic.com](https://www.exobotic.com/solutions/blog-post-eriksbo-spraying-robot)
+- [Exobotic Technologies on LinkedIn](https://www.linkedin.com/posts/exobotictec_agtech-ai-robotics-activity-7293653495197368320-DgIv/)
+- [eriksbo.se](https://eriksbo.se/)
+- [farm-ng.com](https://farm-ng.com/)
+- [ILVO](https://ilvo.vlaanderen.be/)

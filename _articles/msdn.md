@@ -1,10 +1,11 @@
 ---
-title: Mass-Spring Damper Networks
+title: Mass-Spring Damper Networks, emerging locomotion on compliant structures
 subtitle: Morphological properties of mass-spring networks for optimal locomotion learning. Published in Frontiers in Neurorobotics (2017).
 date: 2017-03-27
 context: Ghent University &mdash; HBP
 category: PhD
-tags: [Robotics, Compliant Robotics, Neurorobotics, Machine Learning, Python]
+sectors: [Academic]
+tags: [Compliant Robotics, Neurorobotics, Machine Learning, Python, ML Control Policy]
 thumbnail: /img/msdn/thumb.png
 hero_image: /img/msdn/hero.png
 ---
@@ -13,7 +14,10 @@ hero_image: /img/msdn/hero.png
 
 The combination of brain-inspired AI and robotics is at the core of [our work in the Human Brain Project](http://neurorobotics.net/). Applying machine learning methods to control robots is not as straightforward as it may seem: robots generally evolve in noisy and continuously changing environments, but on the other hand, their **mechanical complexity can be an asset to simplify the control**. This is studied through the fields of embodiment and morphological computation. Extreme examples &mdash; like McGeer's passive walker &mdash; have shown that mechanical structures can produce natural behavior with no controller at all.
 
+<figure>
 <iframe style="aspect-ratio:16/9;width:100%;max-width:640px;display:block;margin:0 auto" src="https://www.youtube.com/embed/CK8IFEGmiKY" frameborder="0" allowfullscreen></iframe>
+<figcaption>Video illustration of the passive walker principles. Source: Ngoya Inst. Tech on youtube</figcaption>
+</figure>
 
 ## Towards a formalization
 
@@ -21,13 +25,16 @@ Recent investigations tried to formalize the relation between the dynamical comp
 
 Three experiments were done in open-loop to determine the influence of the **size of a structure** (number of nodes), the **compliance** (inverse of spring stiffness) and the **saturation at high powers**.
 
+<figure>
 <iframe style="aspect-ratio:16/9;width:100%;max-width:640px;display:block;margin:0 auto" src="https://www.youtube.com/embed/E8Mo0UZuP0I" frameborder="0" allowfullscreen></iframe>
+<figcaption>A video illustration of the main research results published in our paper.</figcaption>
+</figure>
 
 In the second part of the work, we demonstrated the capacity of realizing closed-loop control in a very simple way, requiring very few numerical computations.
 
 <figure>
 <img src="/img/msdn/cl.png" alt="Closed-loop learning pipeline">
-<figcaption>The principal components in the closed-loop learning pipeline consist in a readout layer which is trained at each time step, and a signal mixer that gradually integrates the feedback in the actuation signal.</figcaption>
+<figcaption>The principal components in the closed-loop learning pipeline consist in a readout layer which is trained at each time step, and a signal mixer that gradually integrates the feedback in the actuation signal. Source: Urbain et al., <em>Frontiers in Neurorobotics</em>, 2017.</figcaption>
 </figure>
 
 ## Our contribution

@@ -1,10 +1,11 @@
 ---
-title: Five years at Exobotic Technologies
-subtitle: Technical lead role at a Belgian agricultural-robotics startup &mdash; engineering, methodology, funding and field demos.
+title: Exobotic Technologies, five years in a robotics start-up
+subtitle: Technical lead role at a Belgian robotics startup.
 date: 2025-03-01
 context: Exobotic Technologies
 category: Exobotic
-tags: [Robotics, AGV, Machine Vision, Tech Lead, Fundraising, Agriculture]
+sectors: [Agriculture]
+tags: [Robotics, AGV, UAV, Machine Vision, Business Development, Proposal Writing, Public Speaking, Tech Lead]
 thumbnail: /img/exobotic/team.jpeg
 hero_image: /img/exobotic/team.jpeg
 ---
@@ -13,7 +14,7 @@ hero_image: /img/exobotic/team.jpeg
 
 <figure>
   <img src="{{ '/img/exobotic/fair.jpg' | relative_url }}" alt="Me presenting at FIRA fair in 2023">
-  <figcaption>Presenting at FIRA, the AG robotics forum, in 2023. Photo: exotec, linkedin.com.</figcaption>
+  <figcaption>Presenting at FIRA, the AG robotics forum, in 2023. Photo: exobotictec, linkedin.com.</figcaption>
 </figure>
 
 ## A unified engineering stack
@@ -48,7 +49,7 @@ Outside of pure engineering, the role covered a number of transversal responsibi
     <div class="li-card__img" style="background-image:url('{{ '/img/exobotic/linkedin/fira.jpg' | relative_url }}');"></div>
     <div class="li-card__body">
       <div class="li-card__head"><span class="li-card__logo">in</span><span class="li-card__company">Exobotic Technologies</span></div>
-      <p class="li-card__title">FIRA &mdash; International Forum of Agricultural Robotics</p>
+      <p class="li-card__title">FIRA, International Forum of Agricultural Robotics</p>
       <p class="li-card__desc">Land-A2 live demonstration at the FIRA event.</p>
     </div>
   </a>
@@ -64,7 +65,7 @@ Outside of pure engineering, the role covered a number of transversal responsibi
     <div class="li-card__img" style="background-image:url('{{ '/img/exobotic/linkedin/agribex.jpg' | relative_url }}');"></div>
     <div class="li-card__body">
       <div class="li-card__head"><span class="li-card__logo">in</span><span class="li-card__company">Exobotic Technologies</span></div>
-      <p class="li-card__title">Agribex 2023 &mdash; Brussels</p>
+      <p class="li-card__title">Agribex 2023, Brussels</p>
       <p class="li-card__desc">Robotic Island pitch session at the Belgian agricultural fair.</p>
     </div>
   </a>
@@ -106,3 +107,14 @@ Other Exobotic projects documented on this blog:
 [Arboto spin-off and tree-measurement pipeline]({{ '/articles/arboto/' | relative_url }}),
 [Eriksbo spraying robot]({{ '/articles/eriksbo/' | relative_url }}),
 [SQAT soil-sampling robot]({{ '/articles/sqat/' | relative_url }}).
+
+## Sources
+
+This article only summarises information already publicly available. Pictures and content come from:
+
+- [exobotic.com](https://www.exobotic.com)
+- [Exobotic Technologies on LinkedIn](https://www.linkedin.com/company/exobotictec)
+- [esa.int / ESA Space Solutions](https://business.esa.int/projects/stembot)
+- [ITEA 4](https://itea4.org/organisation/exobotic-technologies.html)
+- [EU Horizon Europe](https://dashboard.tech.ec.europa.eu/qs_digit_dashboard_mt/)
+- [VLAIO](https://www.vlaio.be/)

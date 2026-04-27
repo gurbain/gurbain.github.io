@@ -4,9 +4,10 @@ subtitle: How a camera payload for a robot turned into a digital inventory produ
 date: 2022-06-01
 context: Exobotic Technologies
 category: Exobotic
-tags: [Robotics, Machine Vision, 3D Vision, Deep Learning, Python]
-thumbnail: /img/arboto/drone-nursery.png
-hero_image: /img/arboto/drone-nursery.png
+sectors: [Agriculture]
+tags: [Robotics, Machine Vision, Camera Hardware, Machine Learning, Python, TensorFlow, PyTorch, TensorRT, Nvidia Jetson, GCP]
+thumbnail: /img/arboto/drone-nursery.jpg
+hero_image: /img/arboto/drone-nursery.jpg
 mathjax: true
 ---
 
@@ -17,8 +18,8 @@ During a project between [Exobotic](https://www.exobotic.com/) and [ILVO](https:
 With my colleagues at Exobotic, we initiated a **spin-off, [Arboto](https://www.arboto.eu/)**, focused on that specific problem: help plant nurseries keep an accurate, up-to-date inventory of their plants, with diameter, species, position on the map, and everything a sales desk needs to quote a tree without walking it first.
 
 <figure>
-  <img src="{{ '/img/arboto/drone-nursery.png' | relative_url }}" alt="Aerial view of a European tree nursery with straight rows of young trees">
-  <figcaption>The target environment: a European tree nursery, tens of thousands of trees in straight rows. Photo: arboto.eu.</figcaption>
+  <img src="{{ '/img/arboto/drone-nursery.jpg' | relative_url }}" alt="Aerial view of a European tree nursery with straight rows of young trees">
+  <figcaption>The target environment: a European tree nursery, tens of thousands of trees in straight rows. Source: arboto.eu.</figcaption>
 </figure>
 
 ## My role
@@ -39,6 +40,7 @@ The first pipeline relied on stereo-depth + segmentation, no instrumented tree. 
   <figure class="media-row__card"><img src="{{ '/img/exobotic/land-a2/img_3359.jpeg' | relative_url }}" alt="Land-A2 robot carrying the measurement payload between young trees"></figure>
   <figure class="media-row__card"><img src="{{ '/img/exobotic/land-a2/img_3365.jpeg' | relative_url }}" alt="View down a nursery row as the robot moves along it"></figure>
 </div>
+<p style="text-align:center;font-size:0.85rem;color:var(--color-text-muted);font-style:italic;margin-top:-0.6em;">Source: exobotic.com.</p>
 
 The end result: with only a **depth camera and a GNSS sensor**, the payload measures trunk diameter at 1 m above ground with **~3 mm accuracy**, with no per-tree calibration.
 
@@ -48,7 +50,7 @@ The second generation trades the depth reconstruction for a **smart label** atta
 
 <figure>
   <img src="{{ '/img/arboto/og-image.jpg' | relative_url }}" alt="Arboto smart label on a tree with the digital tree record displayed next to it">
-  <figcaption>A smart Arboto label on a tree, with the live tree record (ID, species, size, row, status) linked to it. Photo: arboto.eu.</figcaption>
+  <figcaption>A smart Arboto label on a tree, with the live tree record (ID, species, size, row, status) linked to it. Source: arboto.eu.</figcaption>
 </figure>
 
 ## The Arboto product today
@@ -56,7 +58,7 @@ The second generation trades the depth reconstruction for a **smart label** atta
 [Arboto](https://arboto.eu/) has since turned into a self-standing startup with its own product. In short: **&ldquo;just drive, measure everything.&rdquo;**
 
 - **Smart labels.** The nursery labels its trees once with Arboto QR tags.
-- **arbo-Eye.** A vehicle-mounted camera device that **reads every label automatically** as it passes, continuously, with no stopping &mdash; covering entire fields in minutes instead of hours.
+- **arbo-Eye.** A vehicle-mounted camera device that **reads every label automatically** as it passes, continuously, with no stopping, covering entire fields in minutes instead of hours.
 - **Cloud inventory.** Scans flow straight into an Arboto dashboard: a live, up-to-date inventory with species, diameters, measurement history, positions on the field map, and a public scan page for visitors.
 
 <div class="media-row">
@@ -65,6 +67,7 @@ The second generation trades the depth reconstruction for a **smart label** atta
     <iframe src="https://www.youtube.com/embed/8nhTXDUCgcE?rel=0&modestbranding=1" title="arbo-Eye demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
+<p style="text-align:center;font-size:0.85rem;color:var(--color-text-muted);font-style:italic;margin-top:-0.6em;">arbo-Eye render and demo video: arboto.eu.</p>
 
 ## Going further
 
@@ -72,3 +75,11 @@ The second generation trades the depth reconstruction for a **smart label** atta
 - Scientific partner on the original project: [ILVO](https://ilvo.vlaanderen.be/).
 - Exobotic Land-A2 platform: [exobotic.com/platforms](https://www.exobotic.com/platforms).
 - The 4WD/4WS robot this pipeline originally ran on: [Land-A2 robot]({{ '/articles/land-a2/' | relative_url }}).
+
+## Sources
+
+This article only summarises information already publicly available. Pictures and quoted content come from:
+
+- [arboto.eu](https://www.arboto.eu/)
+- [exobotic.com](https://www.exobotic.com/)
+- [ILVO](https://ilvo.vlaanderen.be/)

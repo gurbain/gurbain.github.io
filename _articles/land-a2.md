@@ -1,10 +1,11 @@
 ---
-title: "Land-A2: an agile 4WD/4WS robot for rough terrain"
+title: "Land-A2, an agile 4WD/4WS robot for rough terrain"
 subtitle: An electric tool-carrier designed for muddy tree-nursery aisles, with zero-turn kinematics and an RTK-GPS stack built from scratch.
 date: 2022-01-01
 context: Exobotic Technologies
 category: Exobotic
-tags: [Robotics, AGV, Navigation, Electromechanics, Embedded Systems, ROS, Python, C/C++]
+sectors: [Agriculture]
+tags: [Robotics, AGV, Navigation, Electromechanics, Safety, Embedded Linux, Camera Hardware, Machine Vision, Docker, ROS, Python, C/C++, PyTorch, Gazebo/MuJoCo/Isaac, Model Predictive Control, Inverse Kinematics, ML Control Policy, GCP, TensorRT, Nvidia Jetson]
 thumbnail: /img/exobotic/land-a2/hero.webp
 hero_image: /img/exobotic/land-a2/hero.webp
 ---
@@ -22,12 +23,15 @@ The engineering bet is **agility over size**: rather than scaling up wheels and 
 - **Chassis.** Patent-pending modular construction with adjustable wheelbase, spring-damped suspension, and a centrally-rotating payload area to reduce sensor vibration.
 - **Batteries.** Quick-swap modules for field replacement, no tools required.
 
-<div class="media-row" style="grid-template-columns: repeat(4, 1fr); gap: 10px;">
-  <figure class="media-row__card" style="margin:0;"><img src="{{ '/img/exobotic/land-a2/chassis-pair.webp' | relative_url }}" alt="Pair of side chassis modules in the workshop" style="width:100%; height:220px; object-fit:cover; display:block;"></figure>
-  <figure class="media-row__card" style="margin:0;"><img src="{{ '/img/exobotic/land-a2/banner.png' | relative_url }}" alt="Chassis side modules on the assembly bench" style="width:100%; height:220px; object-fit:cover; display:block;"></figure>
-  <figure class="media-row__card" style="margin:0;"><img src="{{ '/img/exobotic/land-a2/wiring.png' | relative_url }}" alt="Electrical wiring inside a chassis module" style="width:100%; height:220px; object-fit:cover; display:block;"></figure>
-  <figure class="media-row__card" style="margin:0;"><img src="{{ '/img/exobotic/land-a2/cad.png' | relative_url }}" alt="CAD render of the Land-A2 chassis" style="width:100%; height:220px; object-fit:cover; display:block;"></figure>
-</div>
+<figure>
+  <div class="media-row" style="grid-template-columns: repeat(4, 1fr); gap: 10px;">
+    <figure class="media-row__card" style="margin:0;"><img src="{{ '/img/exobotic/land-a2/chassis-pair.webp' | relative_url }}" alt="Pair of side chassis modules in the workshop" style="width:100%; height:220px; object-fit:cover; display:block;"></figure>
+    <figure class="media-row__card" style="margin:0;"><img src="{{ '/img/exobotic/land-a2/banner.png' | relative_url }}" alt="Chassis side modules on the assembly bench" style="width:100%; height:220px; object-fit:cover; display:block;"></figure>
+    <figure class="media-row__card" style="margin:0;"><img src="{{ '/img/exobotic/land-a2/wiring.png' | relative_url }}" alt="Electrical wiring inside a chassis module" style="width:100%; height:220px; object-fit:cover; display:block;"></figure>
+    <figure class="media-row__card" style="margin:0;"><img src="{{ '/img/exobotic/land-a2/cad.png' | relative_url }}" alt="CAD render of the Land-A2 chassis" style="width:100%; height:220px; object-fit:cover; display:block;"></figure>
+  </div>
+  <figcaption>Design and assembly of the Land-A2. Source: exobotic.com, hectares.be.</figcaption>
+</figure>
 
 ## Navigation and software stack
 
@@ -38,10 +42,13 @@ This is where I spent most of my time on Land-A2. The goal was a stack an operat
 - **Obstacle avoidance.** Two-stage: a LiDAR occupancy map stops the robot on anything unexpected, and an **AI classifier** on the cameras filters out false positives (tall grass, shadows, leaves) so it will still drive close to the trees.
 - **Operator UI &amp; stack.** A web-based GUI to record paths by teleop, edit waypoints and start/pause/return-home, on top of ROS 2 on Ubuntu Server, containerised with Docker, orchestrated as `systemd` services.
 
-<div class="media-row">
-  <figure class="media-row__card"><img src="{{ '/img/exobotic/land-a2/img_3359.jpeg' | relative_url }}" alt="Land-A2 between rows of young trees at the nursery"></figure>
-  <figure class="media-row__card"><img src="{{ '/img/exobotic/land-a2/img_3365.jpeg' | relative_url }}" alt="Land-A2 driving down a muddy nursery row"></figure>
-</div>
+<figure>
+  <div class="media-row">
+    <figure class="media-row__card"><img src="{{ '/img/exobotic/land-a2/img_3359.jpeg' | relative_url }}" alt="Land-A2 between rows of young trees at the nursery"></figure>
+    <figure class="media-row__card"><img src="{{ '/img/exobotic/land-a2/img_3365.jpeg' | relative_url }}" alt="Land-A2 driving down a muddy nursery row"></figure>
+  </div>
+  <figcaption>The Land-A2 during autonomous navigation in the tree nurseries. Source: exobotic.com.</figcaption>
+</figure>
 
 ## In the spotlights
 
@@ -87,4 +94,5 @@ Land-A2 has been shown at agricultural fairs and used in live customer demonstra
 - Exobotic blog post: [Land-A2 prototype](https://www.exobotic.com/solutions/blog-post-arboto-prototype-robot-vehicle).
 - Platforms overview: [exobotic.com/platforms](https://www.exobotic.com/platforms).
 - Feature article (FR, Hectares magazine): [Comment est-ce fabriqu&eacute; &ndash; les robots d&rsquo;Exobotic Technologies](https://hectares.maglr.com/hectares-2023-001-fr/comment-est-ce-fabrique-les-robots-dexobotic-technologies).
+- A small personnal contribution to open-source software: https://github.com/ros-controls/ros_controllers/pull/441
 - Follow-up on the camera-only perception pipeline: [Arboto &mdash; tree-measurement spin-off]({{ '/articles/arboto/' | relative_url }}).

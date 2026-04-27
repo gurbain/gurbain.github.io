@@ -1,9 +1,10 @@
 ---
-title: SonixCycle &mdash; browsing Foley sounds by meaning
+title: SonixCycle, browsing Foley sounds by meaning
 subtitle: A tool to browse large collections of Foley sounds using perceptual and semantic content. Published at Audio Mostly 2016 &mdash; patented as EP3430535.
 date: 2016-10-01
 context: UMons &mdash; numediart Institute
 category: Student
+sectors: [Cultural, Academic]
 tags: [Audio Processing, Machine Learning, C/C++, CUDA]
 thumbnail: /img/sonixcycle/sonixcycle1.png
 hero_image: /img/sonixcycle/hero.png
@@ -21,7 +22,7 @@ The core idea was to index each audio file at the level of its local perceptual 
 
 <figure>
 <img src="/img/sonixcycle/sonixcycle1.png" alt="SonixCycle pipeline">
-<figcaption>Each audio file is segmented every 10 ms, and features are extracted per segment: MFCCs, timbre descriptors, temporal envelope, spectral statistics. These features then feed a similarity index in Solr.</figcaption>
+<figcaption>Each audio file is segmented every 10 ms, and features are extracted per segment: MFCCs, timbre descriptors, temporal envelope, spectral statistics. These features then feed a similarity index in Solr. Source: Urbain et al., Audio Mostly 2016.</figcaption>
 </figure>
 
 - **Segmentation.** Every file is sliced into 10 ms windows; features (MFCC, timbre properties) are extracted per window.
@@ -31,7 +32,7 @@ The core idea was to index each audio file at the level of its local perceptual 
 
 <figure>
 <img src="/img/sonixcycle/sonixcycle2.png" alt="SonixCycle perceptual map">
-<figcaption>The 2D t-SNE projection allows visual browsing of the library, where audio files that sound alike are spatially close.</figcaption>
+<figcaption>The 2D t-SNE projection allows visual browsing of the library, where audio files that sound alike are spatially close. Source: Urbain et al., Audio Mostly 2016.</figcaption>
 </figure>
 
 ## Publication &amp; patent
@@ -42,6 +43,6 @@ The interface and the indexing workflow are protected under patent [EP3430535 / 
 
 ## Going further
 
-- [numediart Institute](https://numediart.org/) &mdash; host lab at UMons.
-- [Apache Solr](https://solr.apache.org/) &mdash; search engine the system is built on.
-- [t-SNE](https://lvdmaaten.github.io/tsne/) &mdash; the visualization technique used for the perceptual map.
+- [Numediart Institute](https://numediart.org/): host lab at UMons.
+- [Apache Solr](https://solr.apache.org/): search engine the system is built on.
+- [t-SNE](https://lvdmaaten.github.io/tsne/): the visualization technique used for the perceptual map.

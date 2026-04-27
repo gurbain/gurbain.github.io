@@ -1,10 +1,11 @@
 ---
-title: Starting RBAI
+title: RBAI, a personal journey in entrepreneurship
 subtitle: Setting up a one-person robotics &amp; AI consultancy in Belgium.
 date: 2025-04-01
 context: RBAI &mdash; freelance
 category: RBAI
-tags: [Consulting, Business Development, Robotics]
+sectors: [Healthcare]
+tags: [Consulting, Business Development, Tech Lead, Robotics, Machine Learning]
 thumbnail: /img/rbai/paperwork.jpg
 hero_image: /img/rbai/paperwork.jpg
 ---

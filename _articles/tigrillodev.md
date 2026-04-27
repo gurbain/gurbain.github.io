@@ -1,10 +1,11 @@
 ---
-title: A microchip on four legs
+title: Tirigrillo, a microchip on four legs
 subtitle: Details on the design, the electronics and the software architecture of the Tigrillo robot.
 date: 2017-10-17
 context: Ghent University &mdash; HBP
 category: PhD
-tags: [Robotics, Legged Robots, Compliant Robotics, Embedded Systems, Embedded Linux, Electromechanics]
+sectors: [Academic]
+tags: [Robotics, Legged Robots, Compliant Robotics, Embedded Linux, Electromechanics]
 thumbnail: /img/tigrillo/electrical_schema.png
 hero_image: /img/tigrillo/hero.png
 ---

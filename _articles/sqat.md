@@ -1,10 +1,11 @@
 ---
-title: SQAT &mdash; a robot that samples soil
+title: SQAT, a robot that samples soil
 subtitle: From preliminary conception and a Horizon Europe grant to a functional prototype in an ILVO field.
 date: 2024-12-01
 context: Exobotic Technologies &mdash; Horizon Europe
 category: Exobotic
-tags: [Robotics, AGV, Electromechanics, Proposal Writing, Business Development, Python, Embedded Linux]
+sectors: [Agriculture]
+tags: [Robotics, AGV, Electromechanics, Proposal Writing, Python, PyTorch, GCP]
 thumbnail: /img/sqat/werktuigendagen2025.jpg
 hero_image: /img/sqat/werktuigendagen2025.jpg
 ---

@@ -1,10 +1,11 @@
 ---
-title: "A drone that lands on its own: SmartAgriHubs"
+title: "SmartAgriHubs, a fully-automated Ag drone flight"
 subtitle: Autonomous drone flight, a docking ground station, and a 5G image pipeline for hyperspectral crop inspection.
 date: 2021-06-15
 context: Exobotic Technologies
 category: Exobotic
-tags: [Robotics, UAV, Navigation, Machine Vision, Embedded Linux]
+sectors: [Agriculture]
+tags: [Robotics, UAV, Navigation, Machine Vision, Embedded Linux, Python, C/C++]
 thumbnail: /img/exobotic/smartagrihubs/demo-poster.webp
 hero_image: /img/exobotic/smartagrihubs/demo-poster.webp
 ---
@@ -39,3 +40,13 @@ Further reading:
 - Exobotic project page: [SmartAgriHubs Ground Station](https://www.exobotic.com/solutions/blog-post-smartagrihubs-ground-station).
 - AI4Agriculture at Agrifood Technology: [agrifoodtechnology.be](https://www.agrifoodtechnology.be/en/news/ai4agriculture).
 - SmartAgriHubs programme: [smartagrihubs.eu](https://www.smartagrihubs.eu/).
+
+## Sources
+
+This article only summarises information already publicly available. Pictures and quoted content come from:
+
+- [exobotic.com](https://www.exobotic.com/solutions/blog-post-smartagrihubs-ground-station)
+- [agrifoodtechnology.be](https://www.agrifoodtechnology.be/en/news/ai4agriculture)
+- [smartagrihubs.eu](https://www.smartagrihubs.eu/)
+- [Robovision](https://www.robovision.ai/)
+- [ILVO](https://ilvo.vlaanderen.be/)

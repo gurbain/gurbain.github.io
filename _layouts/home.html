@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<header class="hero" style="background-image: url('{{ '/img/home-bg-3.png' | relative_url }}');">
+<header class="hero" style="background-image: url('{{ '/img/home-bg-3.jpg' | relative_url }}');">
   <div class="hero__overlay"></div>
   <div class="hero__inner">
     <p class="hero__greeting">Gabriel Urbain&rsquo;s blog</p>
-    <h1>A few insights on my work in <span class="accent">Robotics, and AI</span></h1>
+    <h1>A few insights on my work in <span class="accent">Robotics and AI</span></h1>
     <p class="hero__lead">
       Engineer and PhD with a strong academic background (Ghent University, Supaero, UMons, MIT, IIT) and 5+ years of
       experience in a
@@ -44,13 +44,19 @@ layout: default
 <main class="container">
 
   {% assign articles = site.articles | sort: 'date' | reverse %}
+  {% assign all_categories = "" | split: "," %}
+  {% assign all_sectors = "" | split: "," %}
   {% assign all_tags = "" | split: "," %}
   {% assign all_years = "" | split: "," %}
   {% for a in articles %}
+  {% if a.category %}{% assign all_categories = all_categories | push: a.category %}{% endif %}
+  {% for s in a.sectors %}{% assign all_sectors = all_sectors | push: s %}{% endfor %}
   {% for t in a.tags %}{% assign all_tags = all_tags | push: t %}{% endfor %}
   {% assign y = a.date | date: "%Y" %}
   {% assign all_years = all_years | push: y %}
   {% endfor %}
+  {% assign all_categories = all_categories | uniq | sort %}
+  {% assign all_sectors = all_sectors | uniq | sort %}
   {% assign all_tags = all_tags | uniq | sort %}
   {% assign all_years = all_years | uniq | sort | reverse %}
 
@@ -68,29 +74,51 @@ layout: default
 
       <div class="sidebar__group">
         <span class="sidebar__label">Category</span>
-        <div class="sidebar__radios">
-          <label><input type="radio" name="cat" value="__all__" checked> <span>All</span></label>
-          <label><input type="radio" name="cat" value="Student"> <span>Student</span></label>
-          <label><input type="radio" name="cat" value="PhD"> <span>PhD</span></label>
-          <label><input type="radio" name="cat" value="Exobotic"> <span>Exobotic</span></label>
-          <label><input type="radio" name="cat" value="RBAI"> <span>RBAI</span></label>
+        <div class="filter-dd" data-filter="category">
+          <button type="button" class="filter-dd__btn">All categories</button>
+          <div class="filter-dd__panel" hidden>
+            {% for c in all_categories %}
+            <label><input type="checkbox" value="{{ c }}"> <span>{{ c }}</span></label>
+            {% endfor %}
+          </div>
         </div>
       </div>
 
       <div class="sidebar__group">
-        <label class="sidebar__label" for="year-select">Year</label>
-        <select id="year-select">
-          <option value="__all__">All years</option>
-          {% for y in all_years %}<option value="{{ y }}">{{ y }}</option>{% endfor %}
-        </select>
+        <span class="sidebar__label">Sector</span>
+        <div class="filter-dd" data-filter="sector">
+          <button type="button" class="filter-dd__btn">All sectors</button>
+          <div class="filter-dd__panel" hidden>
+            {% if all_sectors.size == 0 %}<p class="filter-dd__empty">No sectors defined yet.</p>{% endif %}
+            {% for s in all_sectors %}
+            <label><input type="checkbox" value="{{ s }}"> <span>{{ s }}</span></label>
+            {% endfor %}
+          </div>
+        </div>
       </div>
 
       <div class="sidebar__group">
-        <label class="sidebar__label" for="tag-select">Tag</label>
-        <select id="tag-select">
-          <option value="__all__">All tags</option>
-          {% for t in all_tags %}<option value="{{ t }}">{{ t }}</option>{% endfor %}
-        </select>
+        <span class="sidebar__label">Year</span>
+        <div class="filter-dd" data-filter="year">
+          <button type="button" class="filter-dd__btn">All years</button>
+          <div class="filter-dd__panel" hidden>
+            {% for y in all_years %}
+            <label><input type="checkbox" value="{{ y }}"> <span>{{ y }}</span></label>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar__group">
+        <span class="sidebar__label">Tag</span>
+        <div class="filter-dd" data-filter="tag">
+          <button type="button" class="filter-dd__btn">All tags</button>
+          <div class="filter-dd__panel" hidden>
+            {% for t in all_tags %}
+            <label><input type="checkbox" value="{{ t }}"> <span>{{ t }}</span></label>
+            {% endfor %}
+          </div>
+        </div>
       </div>
 
       <button type="button" id="reset-filters" class="sidebar__reset">Reset filters</button>
@@ -102,9 +130,9 @@ layout: default
         {% assign cat = a.category | default: "Other" %}
         {% assign year = a.date | date: "%Y" %}
         {% capture haystack %}{{ a.title | strip_html }} {{ a.subtitle | strip_html }} {{ a.context | strip_html }} {{
-        a.tags | join: ' ' }} {{ a.content | strip_html | strip_newlines }}{% endcapture %}
-        <article class="article-card" data-tags="{{ a.tags | join: ',' }}" data-category="{{ cat }}"
-          data-year="{{ year }}" data-search="{{ haystack | downcase | escape }}">
+        a.tags | join: ' ' }} {{ a.sectors | join: ' ' }} {{ a.content | strip_html | strip_newlines }}{% endcapture %}
+        <article class="article-card" data-category="{{ cat }}" data-sectors="{{ a.sectors | join: ',' }}"
+          data-year="{{ year }}" data-tags="{{ a.tags | join: ',' }}" data-search="{{ haystack | downcase | escape }}">
           {% if a.thumbnail %}<a href="{{ a.url | relative_url }}" class="article-card__thumb"
             style="background-image:url('{{ a.thumbnail | relative_url }}');"></a>{% endif %}
           <div class="article-card__body">
@@ -130,47 +158,102 @@ layout: default
   (function () {
     var cards = document.querySelectorAll('#article-grid .article-card');
     var search = document.getElementById('search-input');
-    var yearSel = document.getElementById('year-select');
-    var tagSel = document.getElementById('tag-select');
-    var catRadios = document.querySelectorAll('input[name="cat"]');
-    var resetBtn = document.getElementById('reset-filters');
     var emptyMsg = document.getElementById('article-empty');
+    var dropdowns = document.querySelectorAll('.filter-dd');
+    var resetBtn = document.getElementById('reset-filters');
 
-    function getCategory () {
-      for (var i = 0; i < catRadios.length; i++) if (catRadios[i].checked) return catRadios[i].value;
-      return '__all__';
+    // Map of filter name -> { btn, labelDefault, getValues() }
+    var filters = {};
+    dropdowns.forEach(function (dd) {
+      var name = dd.getAttribute('data-filter');
+      var btn = dd.querySelector('.filter-dd__btn');
+      var panel = dd.querySelector('.filter-dd__panel');
+      var defaultLabel = btn.textContent;
+      filters[name] = {
+        dd: dd, btn: btn, panel: panel, defaultLabel: defaultLabel,
+        boxes: panel.querySelectorAll('input[type="checkbox"]')
+      };
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = !panel.hidden;
+        // Close all panels first
+        Object.keys(filters).forEach(function (k) { filters[k].panel.hidden = true; filters[k].dd.classList.remove('is-open'); });
+        if (!open) { panel.hidden = false; dd.classList.add('is-open'); }
+      });
+      panel.addEventListener('click', function (e) { e.stopPropagation(); });
+    });
+
+    document.addEventListener('click', function () {
+      Object.keys(filters).forEach(function (k) { filters[k].panel.hidden = true; filters[k].dd.classList.remove('is-open'); });
+    });
+
+    function selectedValues (name) {
+      var out = [];
+      filters[name].boxes.forEach(function (b) { if (b.checked) out.push(b.value); });
+      return out;
+    }
+
+    function updateBtnLabel (name) {
+      var sel = selectedValues(name);
+      var btn = filters[name].btn;
+      if (sel.length === 0) {
+        btn.textContent = filters[name].defaultLabel;
+        btn.classList.remove('is-active');
+      } else if (sel.length === 1) {
+        btn.textContent = sel[0];
+        btn.classList.add('is-active');
+      } else {
+        btn.textContent = sel.length + ' selected';
+        btn.classList.add('is-active');
+      }
+    }
+
+    function matchAny (cardValues, selected) {
+      if (selected.length === 0) return true;
+      for (var i = 0; i < cardValues.length; i++) {
+        if (selected.indexOf(cardValues[i]) >= 0) return true;
+      }
+      return false;
     }
 
     function apply () {
       var q = (search.value || '').trim().toLowerCase();
-      var year = yearSel.value;
-      var tag = tagSel.value;
-      var cat = getCategory();
+      var selCat = selectedValues('category');
+      var selSec = selectedValues('sector');
+      var selYear = selectedValues('year');
+      var selTag = selectedValues('tag');
       var visible = 0;
 
       cards.forEach(function (card) {
         var okSearch = !q || (card.getAttribute('data-search') || '').indexOf(q) >= 0;
-        var okYear = year === '__all__' || card.getAttribute('data-year') === year;
-        var okCat = cat === '__all__' || card.getAttribute('data-category') === cat;
-        var tags = (card.getAttribute('data-tags') || '').split(',');
-        var okTag = tag === '__all__' || tags.indexOf(tag) >= 0;
-        var show = okSearch && okYear && okCat && okTag;
+        var cardCat = [card.getAttribute('data-category') || ''];
+        var cardSec = (card.getAttribute('data-sectors') || '').split(',').filter(Boolean);
+        var cardYear = [card.getAttribute('data-year') || ''];
+        var cardTags = (card.getAttribute('data-tags') || '').split(',').filter(Boolean);
+        var show = okSearch
+          && matchAny(cardCat, selCat)
+          && matchAny(cardSec, selSec)
+          && matchAny(cardYear, selYear)
+          && matchAny(cardTags, selTag);
         card.classList.toggle('is-hidden', !show);
         if (show) visible++;
       });
       emptyMsg.hidden = visible !== 0;
     }
 
+    Object.keys(filters).forEach(function (name) {
+      filters[name].boxes.forEach(function (b) {
+        b.addEventListener('change', function () { updateBtnLabel(name); apply(); });
+      });
+    });
     search.addEventListener('input', apply);
-    yearSel.addEventListener('change', apply);
-    tagSel.addEventListener('change', apply);
-    catRadios.forEach(function (r) { r.addEventListener('change', apply); });
 
     resetBtn.addEventListener('click', function () {
       search.value = '';
-      yearSel.value = '__all__';
-      tagSel.value = '__all__';
-      document.querySelector('input[name="cat"][value="__all__"]').checked = true;
+      Object.keys(filters).forEach(function (name) {
+        filters[name].boxes.forEach(function (b) { b.checked = false; });
+        updateBtnLabel(name);
+      });
       apply();
     });
   })();

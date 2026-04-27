@@ -1,10 +1,11 @@
 ---
-title: IBA DynamicARC &mdash; anti-collision &amp; motion clearance
+title: IBA DynamicARC, anti-collision and motion clearance in proton therapy
 subtitle: Contributing to the safety envelope of a proton-arc therapy gantry.
 date: 2025-05-01
 context: RBAI &mdash; Ion Beam Applications (IBA)
 category: RBAI
-tags: [Robotics, Electromechanics, Control & Planning, Safety, Medical, EMA/FDA Validation, Consulting]
+sectors: [Healthcare]
+tags: [Robotics, Machine Vision, Electromechanics, Safety, Camera Hardware, EMA/FDA Validation, Consulting, Docker, Python, PyTorch, TensorRT, Nvidia Jetson, Inverse Kinematics]
 thumbnail: /img/iba/dynamicarc.png
 hero_image: /img/iba/dynamicarc.png
 ---
@@ -19,5 +20,11 @@ The approach combines **camera-based sensors** with a **3D kinematics model** of
 
 ## Going further
 
-- Official IBA DynamicARC page: [iba-protontherapy.com/dynamicarc-0](https://www.iba-protontherapy.com/dynamicarc-0).
+- Official [IBA DynamicARC page](https://www.iba-protontherapy.com/dynamicarc-0).
 - Broader freelance context: [Starting RBAI]({{ '/articles/rbai/' | relative_url }}).
+
+## Sources
+
+This article only summarises information already publicly available. Pictures and quoted content come from:
+
+- [iba-protontherapy.com](https://www.iba-protontherapy.com/)

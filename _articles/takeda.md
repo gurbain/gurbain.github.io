@@ -1,10 +1,11 @@
 ---
-title: Takeda &mdash; AVI and robotic maintenance
+title: Takeda, AVI and robotic maintenance
 subtitle: Machine vision and robotics contributions to a regulated pharmaceutical manufacturing site.
 date: 2025-04-01
 context: RBAI &mdash; Takeda Pharmaceuticals
 category: RBAI
-tags: [Machine Vision, Deep Learning, Robotics, Industrial Automation, Spot SDK, GxP, EMA/FDA Validation, Python, Consulting]
+sectors: [Healthcare]
+tags: [Machine Vision, Machine Learning, Camera Hardware, EMA/FDA Validation, Python, Consulting, PyTorch]
 thumbnail: /img/takeda/lessines.jpg
 hero_image: /img/takeda/lessines.jpg
 ---
@@ -41,3 +42,12 @@ In September 2025, the project received the **Robotics Application of the Year A
 
 - Digital manufacturing at Takeda: [jobs.takeda.com/digital-manufacturing-at-takeda](https://jobs.takeda.com/digital-manufacturing-at-takeda).
 - Broader freelance context: [Starting RBAI]({{ '/articles/rbai/' | relative_url }}).
+
+## Sources
+
+This article only summarises information already publicly available. Pictures and quoted content come from:
+
+- [takeda.com](https://www.takeda.com/) and [jobs.takeda.com/digital-manufacturing-at-takeda](https://jobs.takeda.com/digital-manufacturing-at-takeda)
+- [Takeda in Belgium on LinkedIn](https://www.linkedin.com/posts/takeda-in-belgium_robotics-robotics-engineering-activity-7379838405771300864-Gk7r/)
+- [Notélé on Facebook](https://www.facebook.com/watch/?v=919587524358739)
+- [ISPE D/A/CH](https://ispe.org/)

@@ -1,10 +1,11 @@
 ---
-title: Five years with the Human Brain Project
+title: HBP, four years in a European flagship project
 subtitle: A PhD funded by the HBP Neurorobotics subproject &mdash; more than a line on a grant number.
 date: 2020-01-01
 context: Ghent University &mdash; HBP
 category: PhD
-tags: [Robotics, Neurorobotics, Academic Writing, Public Speaking, Proposal Writing]
+sectors: [Healthcare, Academic]
+tags: [Robotics, Neurorobotics, Proposal Writing, Public Speaking, Tensorflow, Gazebo/MuJoCo/Isaac]
 thumbnail: /img/hbp/brain-wiring.jpg
 hero_image: /img/hbp/brain-wiring.jpg
 ---

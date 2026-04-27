@@ -1,10 +1,11 @@
 ---
-title: iRobotique &mdash; robots for museums
+title: iRobotique, robots for museums
 subtitle: The story of a non-profit association from Eurobot contests to a modular exploration platform for the Mus&eacute;e Royal de Mariemont.
 date: 2014-12-01
 context: iRobotique
 category: Student
-tags: [Robotics, Embedded Systems, Public Speaking]
+sectors: [Cultural]
+tags: [Robotics, Embedded Linux, Public Speaking, Tech Lead, Proposal Writing, Camera Hardware, Python, C/C++, Inverse Kinematics]
 thumbnail: /img/irobotique/hero.png
 hero_image: /img/irobotique/hero.png
 ---

@@ -1,10 +1,11 @@
 ---
-title: "HyQ: compliance and cerebellum-inspired control"
-subtitle: Reflex-based locomotion on a 90&nbsp;kg hydraulic quadruped, studied during a research stay at IIT Genoa.
+title: "HyQ, end-to-end neural network locomotion on a 90 kg quadruped robot"
+subtitle: Reflex-based locomotion on a hydraulic quadruped, studied during a research stay at IIT Genoa.
 date: 2018-09-15
 context: Ghent University &mdash; IIT &mdash; HBP
 category: PhD
-tags: [Robotics, Legged Robots, Compliant Robotics, Neurorobotics, Machine Learning, Reinforcement Learning, Control & Planning, Python]
+sectors: [Academic]
+tags: [Robotics, Legged Robots, Compliant Robotics, Neurorobotics, Machine Learning, Reinforcement Learning, Docker, ROS, Python, C/C++, Gazebo/MuJoCo/Isaac, Tensorflow, ML Control Policy, Model Predictive Control]
 thumbnail: /img/hyq/hero.png
 hero_image: /img/hyq/hero.png
 mathjax: true
@@ -26,7 +27,7 @@ $$\mathbf{W}^{\mathrm{out}}_{k+1} = \mathbf{W}^{\mathrm{out}}_{k} - \mathbf{P}_{
 
 <figure>
   <img src="/img/hyq/cereb_architecture.png" alt="Three-layer control architecture diagram">
-  <figcaption>The shared three-layer architecture: robot + active compliance (bottom), reflex-based motion controller (middle), cerebellum-inspired posture module (top).</figcaption>
+  <figcaption>The shared three-layer architecture: robot + active compliance (bottom), reflex-based motion controller (middle), cerebellum-inspired posture module (top). Source: Urbain et al., ICRA 2020.</figcaption>
 </figure>
 
 ## Paper 1: Effect of compliance on morphological control
@@ -37,13 +38,16 @@ We observed that the cost of Transport grows almost exponentially with stiffness
 
 <figure>
   <img style="aspect-ratio:16/9;width:100%;max-width:700px;"  src="/img/hyq/compliance_stabilization.png" alt="COT, power, speed and accuracy as a function of stiffness">
-  <figcaption>This figure shows the end-effector trajectories of the right front foot (red), the left front foot (purple), and also the trunk’s center of mass (green). The experiment is repeated for two compliance values discussed in the paper: compliant (top), and stiff (bottom). It shows a deteriorated locomotion cycle at higher stiffness.</figcaption>
+  <figcaption>This figure shows the end-effector trajectories of the right front foot (red), the left front foot (purple), and also the trunk&rsquo;s center of mass (green). The experiment is repeated for two compliance values discussed in the paper: compliant (top), and stiff (bottom). It shows a deteriorated locomotion cycle at higher stiffness. Source: Urbain et al., <em>Autonomous Robots</em>, 2021.</figcaption>
 </figure>
 
 
 More details are discussed in the paper [Effect of Compliance on Morphological Control of Dynamic Locomotion with HyQ](https://biblio.ugent.be/publication/8698429/file/8698434.pdf).
 
+<figure>
 <iframe style="aspect-ratio:16/9;width:100%;max-width:700px;display:block;margin:0 auto" src="https://www.youtube.com/embed/2BUtWXqTzQY?si=2d0E7CN_tvdc2bPd" frameborder="0" allowfullscreen></iframe>
+  <figcaption>A short video presentation of the paper published in <em>Autonomous Robots</em>.</figcaption>
+</figure>
 
 ## Paper 2: Cerebellum-inspired stance control
 
@@ -56,7 +60,7 @@ Over twelve experimental trials on the real HyQ, **all PSE trials reproduced the
 
 <figure>
   <img src="/img/hyq/cereb_nrmse.png" alt="NRMSE of neural predictions for PSE and RSE trials">
-  <figcaption>NRMSE of the reflex-network predictions. Green: PSE trials, stable through the test phase. Red: RSE trials, diverging during closing/testing.</figcaption>
+  <figcaption>NRMSE of the reflex-network predictions. Green: PSE trials, stable through the test phase. Red: RSE trials, diverging during closing/testing. Source: Urbain et al., ICRA 2020.</figcaption>
 </figure>
 
 More insights are provided in the paper [Stance Control Inspired by Cerebellum Stabilizes Reflex-Based Locomotion on HyQ](https://arxiv.org/pdf/2003.09327).

@@ -1,10 +1,11 @@
 ---
-title: Tigrillo &mdash; a bio-inspired compliant quadruped
+title: Tigrillo, a bio-inspired compliant quadruped
 subtitle: A small compliant quadruped platform for experiments on spiking CPGs, reservoir computing and transfer learning.
 date: 2017-07-03
 context: Ghent University &mdash; HBP
 category: PhD
-tags: [Robotics, Legged Robots, Compliant Robotics, Neurorobotics, Spiking Neural Networks, Embedded Linux, ROS]
+sectors: [Academic]
+tags: [Robotics, Legged Robots, Compliant Robotics, Neurorobotics, Embedded Linux, ROS, Python, Gazebo/MuJoCo/Isaac, Inverse Kinematics]
 thumbnail: /img/tigrillo/thumb.jpg
 hero_image: /img/tigrillo/hero.png
 ---

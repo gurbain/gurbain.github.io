@@ -1,10 +1,11 @@
 ---
-title: From simulation to reality
+title: Tigrillo, from simulation to reality
 subtitle: Bridging the learning gap on a compliant quadruped robot using domain randomization.
 date: 2018-01-01
 context: Ghent University &mdash; HBP
 category: PhD
-tags: [Robotics, Legged Robots, Machine Learning, Compliant Robotics, Neurorobotics, Reinforcement Learning]
+sectors: [Academic]
+tags: [Robotics, Legged Robots, Machine Learning, Compliant Robotics, Neurorobotics, Reinforcement Learning, Docker, ROS, Python, PyTorch, ML Control Policy, Gazebo/MuJoCo/Isaac]
 thumbnail: /img/simtoreal/hero.png
 hero_image: /img/simtoreal/hero.png
 ---

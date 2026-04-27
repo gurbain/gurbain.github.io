@@ -1,10 +1,11 @@
 ---
-title: Camera Sensor Fusion for Zero-Gravity Navigation
+title: HALO, camera sensor fusion for zero-gravity navigation
 subtitle: Six-month Master thesis at MIT's Space Systems Lab on the HALO hardware extension for the SPHERES nano-satellites.
 date: 2014-12-01
 context: MIT Space Systems Lab
 category: Student
-tags: [3D Vision, Machine Vision, Industrial Cameras, C/C++]
+sectors: [Aerospace, Academic]
+tags: [Machine Vision, Embedded Linux, Camera Hardware, Navigation, C/C++, Gazebo/MuJoCo/Isaac]
 thumbnail: /img/halo/inspect3.png
 hero_image: /img/halo/hero.png
 mathjax: true
@@ -16,7 +17,10 @@ If you were asked to picture an astronaut, you would probably imagine him in his
 
 Robots are therefore good candidates to replace some EVAs for external damage inspection and repair &mdash; but a major challenge remains to perform safe and reliable navigation in a spatial environment. The [SPHERES](https://en.wikipedia.org/wiki/SPHERES) testbed has been imagined and designed by the [MIT Space Systems Lab](http://ssl.mit.edu/) then sent to the International Space Station in the first decade of this century to allow scientists and astronauts to conduct experiments in real zero-gravity: swarm robotics, vehicle rendezvous and docking, visual navigation, actuation through electromagnetic fields or gyroscopes, fluid mechanics, modular deployment, junior robot competitions, and more.
 
-<iframe style="aspect-ratio:4/3;width:100%;max-width:560px;display:block;margin:0 auto" src="https://www.youtube.com/embed/MXLsu04QNHA" frameborder="0" allowfullscreen></iframe>
+<figure>
+<iframe style="aspect-ratio:16/9;width:100%;display:block;margin:0 auto" src="https://www.youtube.com/embed/nf8fgLwhN7E?si=eX4OfO9QzGujfsD1&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>A glimpse of the SPHERES project, explained by NASA astronaut Greg Chamitoff.</figcaption>
+</figure>
 
 ## A new hardware extension to improve visual navigation
 
@@ -26,7 +30,7 @@ To cope with these issues, a new extension for the SPHERES nano-satellites was p
 
 <figure>
 <img src="/img/halo/inspect3.png" alt="HALO hardware enclosing a SPHERES nano-satellite">
-<figcaption>One SPHERES nano-satellite is encapsulated in the HALO hardware, which embeds extra batteries, an external Linux computer, four gyroscopes, a ToF camera, a thermographic camera and a stereoscopic setup. The full system and project is named INSPECT.</figcaption>
+<figcaption>One SPHERES nano-satellite is encapsulated in the HALO hardware, which embeds extra batteries, an external Linux computer, four gyroscopes, a ToF camera, a thermographic camera and a stereoscopic setup. The full system and project is named INSPECT. Source: own Master&rsquo;s thesis, MIT Space Systems Lab.</figcaption>
 </figure>
 
 ## A probabilistic approach to fuse the sensor images
@@ -37,7 +41,7 @@ Though the automatic calibration method performed really well, the fusion algori
 
 <figure>
 <img src="/img/halo/inspect4.png" alt="Camera setup and point cloud after fusion">
-<figcaption>Left: a representation of the camera setup and the probability distribution for the ToF camera. Right: an example of the dense point cloud after fusion.</figcaption>
+<figcaption>Left: a representation of the camera setup and the probability distribution for the ToF camera. Right: an example of the dense point cloud after fusion. Source: own Master&rsquo;s thesis, MIT Space Systems Lab.</figcaption>
 </figure>
 
 ## Going further
