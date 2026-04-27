@@ -1,58 +1,71 @@
 ---
-title: HBP, four years in a European flagship project
-subtitle: A PhD funded by the HBP Neurorobotics subproject &mdash; more than a line on a grant number.
-date: 2020-01-01
+title: PhD at AIRO (Ugent), five years on biologically inspired locomotion within HBP project
+subtitle: My doctoral work on compliant robot locomotion at Ghent University, funded by the Human Brain Project.
+date: 2020-09-01
 context: Ghent University &mdash; HBP
 category: PhD
 sectors: [Healthcare, Academic]
-tags: [Robotics, Neurorobotics, Proposal Writing, Public Speaking, Tensorflow, Gazebo/MuJoCo/Isaac]
+tags: [Robotics, Neurorobotics, Proposal Writing, Public Speaking, TensorFlow, Gazebo/MuJoCo/Isaac]
 thumbnail: /img/hbp/brain-wiring.jpg
 hero_image: /img/hbp/brain-wiring.jpg
 ---
 
-Between October 2015 and September 2020, my PhD at [AIRO / IDLab &ndash; Ghent University &ndash; imec](https://airo.ugent.be) was funded by the [Human Brain Project](https://www.humanbrainproject.eu/) (HBP), one of the largest European flagship research programmes. Within the HBP, I belonged to the [Neurorobotics subproject](https://neurorobotics.net/) (SP10), whose mission was to connect spiking neural networks and simulated brain models to physical or simulated robots in a unified software stack: the **Neurorobotics Platform (NRP)**.
+Between October 2015 and September 2020, I did my PhD at [AIRO](https://airo.ugent.be), the AI and Robotics research group of IDLab &mdash; Ghent University, imec, funded by the [Human Brain Project](https://www.humanbrainproject.eu/) (HBP). AIRO had been an early bet on physical AI: several of my fellow PhD students had hand-rolled deep-learning kernels in CUDA back when that was still unusual, and later moved to DeepMind, contributing to projects like WaveNet and AlphaGo. Two strands ran in parallel during my time there: AIRO&rsquo;s home agenda on machine learning and robotics, with its load of daily chats with my the rest of the team about recent AI and robotics advance, and HBP&rsquo;s neurorobotics ambition of plugging spiking brain models into embodied robots, with regular pluridisciplinar meetings all over Europe.
 
-Some of my research visible on this blog &mdash; [mass-spring networks]({{ '/articles/msdn/' | relative_url }}), [Tigrillo]({{ '/articles/spinngrillo/' | relative_url }}), [HyQ locomotion control]({{ '/articles/hyq/' | relative_url }}) &mdash; was carried out under HBP grants. HBP gave me the chance to meet neuroscientists, roboticists and computer scientists across the continent and to initiate cross-disciplinary partnerships and discussions.
+## My PhD thesis
 
-## Inside the Neurorobotics Platform
+**[Biologically inspired locomotion of compliant robots](https://biblio.ugent.be/publication/8720560)**, supervised by Francis wyffels and Joni Dambre. The thesis tackles three questions:
 
-The NRP is a simulation environment that connects spiking neural networks with robotic systems. It lets researchers pair different brain models with simulated robots running on high-performance computing clusters, so that embodied experiments can actually be conducted at the scale the HBP aspired to. Within my PhD, I:
+1. How to **transfer learned controllers from simulation to real compliant robots**.
+2. The **trade-off between mechanical compliance and controller complexity** in dynamic locomotion.
+3. Whether **reflex-based control on compliant structures** can be stabilised by **cerebellum-inspired stance correction**.
 
-- Contributed to the NRP open-source codebase (Python / C++ / ROS), particularly on the robotic side &mdash; MuJoCo / Gazebo integration, brain-to-robot coupling, transfer-learning utilities.
-- Deployed the Tigrillo compliant quadruped on the NRP as a reference platform for closed-loop experiments with spiking CPGs.
-- Acted as a practical &ldquo;user&rdquo; during integration phases, reporting bugs, shaping the Python user API, and co-running tutorials with the core platform team (TUM, Fortiss, SSSA, KTH).
+Three platforms supported the experiments: a simulated [mass-spring-damper network]({{ '/articles/msdn/' | relative_url }}), the in-house [Tigrillo]({{ '/articles/spinngrillo/' | relative_url }}) compliant quadruped, and the [HyQ]({{ '/articles/hyq/' | relative_url }}) hydraulic quadruped at IIT Genoa.
 
-The platform has evolved since then and is now part of the [EBRAINS](https://ebrains.eu/) infrastructure.
+## Publications
 
-## Education, student representation, community
+Most of the papers below are also documented as standalone blog posts.
 
-Research consortiums of that size live and die on their education and community programmes. I was elected **Student Representative at the HBP Education Programme Committee** (a mandate that ran until May 2019), which meant representing ~150 HBP-funded PhDs across Europe in strategic discussions about schools, grants and workshops.
+**Journal articles**
 
-On top of that role, across five years I organized, hosted and contributed to the events below. They are pulled verbatim from my thesis and give a fair picture of what being *inside HBP* actually looked like:
+- 2021 &mdash; Urbain et al. *Effect of compliance on morphological control of dynamic locomotion with HyQ.* Autonomous Robots. &rarr; [blog post]({{ '/articles/hyq/' | relative_url }}).
+- 2019 &mdash; Vandesompele, Urbain et al. *Populations of spiking neurons for reservoir computing: closed-loop control of a compliant quadruped.* Cognitive Systems Research. &rarr; [blog post]({{ '/articles/spinngrillo/' | relative_url }}).
+- 2019 &mdash; Massi, Vannucci, &hellip;, Urbain et al. *Combining evolutionary and adaptive control strategies for quadruped robotic locomotion.* Frontiers in Neurorobotics.
+- 2019 &mdash; Vandesompele, Urbain et al. *Body randomization reduces the sim-to-real gap for compliant quadruped locomotion.* Frontiers in Neurorobotics. &rarr; [blog post]({{ '/articles/simtoreal/' | relative_url }}).
+- 2017 &mdash; Urbain et al. *Morphological properties of mass-spring networks for optimal locomotion learning.* Frontiers in Neurorobotics. &rarr; [blog post]({{ '/articles/msdn/' | relative_url }}).
 
-- **Jan 2020, Pisa (IT)** &mdash; Scientific chair of the *4th HBP Student Conference*.
-- **Jul 2019, Belgrade (RS)** &mdash; Chair and committee member of the *HBP Young Researcher Event*.
-- **Feb 2019, Ghent (BE)** &mdash; Host and scientific chair of the *3rd HBP Student Conference*.
-- **May 2018, Stockholm (SE)** &mdash; Technical demonstration and lightning talk at the *HBP SGA1 European Review*.
-- **Apr 2018, Tokyo (JP)** &mdash; Presentation at the *Europe&ndash;Japan Neurorobotics Workshop*.
-- **Nov 2017, Brussels (BE)** &mdash; Demonstration at the *European Robotics Week 2017*.
-- **Sep 2017, Ghent (BE)** &mdash; Introduction speech and host of the *HBP SP10 Trimestrial Meeting*.
-- **Jun 2017, Obergurgl (AT)** &mdash; Lightning talk and poster at the *4th HBP School &ndash; Future of Artificial Intelligence*.
-- **Apr 2017, Munich (DE)** &mdash; Lightning talk at the *1st Neurorobotics Platform User Workshop*.
-- **Dec 2016, Obergurgl (AT)** &mdash; Lightning talk and poster at the *3rd HBP School &ndash; Future of Neuroscience*.
-- **Jul 2016, Ghent (BE)** &mdash; PhD vulgarisation at the *Let&rsquo;s Talk Science!* Communication Summer School.
-- **Jan 2016, Manchester (UK)** &mdash; Lightning talk and poster at the *4th HBP Education Workshop &ndash; Future of Computing*.
+**Conference papers**
 
-Each of these events was an opportunity to present technical progress, but also &mdash; and more importantly &mdash; to negotiate with neuroscientists whether what we roboticists were doing actually deserved the adjective &ldquo;brain-inspired&rdquo;. The discipline that imposed on me &mdash; proving I had something worth telling a neuroscientist, and learning to listen &mdash; is probably the single most useful side-product of those five years.
+- 2020 &mdash; Urbain et al. *Stance control inspired by cerebellum stabilizes reflex-based locomotion on HyQ.* ICRA. &rarr; [blog post]({{ '/articles/hyq/' | relative_url }}).
+- 2019 &mdash; Vandesompele, Urbain et al. *Closed-loop control of a compliant quadruped with spiking neural networks.* BICA Meeting.
+- 2018 &mdash; Urbain et al. *Design of a bio-inspired compliant quadruped robot for closed-loop locomotion control.* 2nd HBP Student Conference. &rarr; [blog post]({{ '/articles/spinngrillo/' | relative_url }}).
+- 2018 &mdash; Urbain et al. *Calibration method to improve transfer from simulation to quadruped robots.* International Conference on Simulation of Adaptive Behavior (SAB).
 
-## What it taught me
+## Inside the HBP Neurorobotics Platform
 
-- **Shipping research code in a consortium.** The NRP had to run for a neuroscientist who had never touched ROS, on a cluster, with a brain model that her colleague wrote. Releasing code that survives that context is a different craft than releasing code for yourself.
-- **Running events.** Hosting student conferences for ~60 participants taught me logistics, budgeting, speaker wrangling, and how to get academics to actually stop talking at Q&amp;A time.
-- **Translating across disciplines.** Robotics, machine learning, neuroscience, hardware, simulation &mdash; being the glue between them is often more valuable than being the best at any one of them.
+Within HBP, I belonged to the [Neurorobotics subproject](https://neurorobotics.net/) (SP10), whose mission was to connect spiking neural networks and simulated brain models to physical or simulated robots in a unified software stack: the **Neurorobotics Platform (NRP)**. Within my PhD, I:
+
+- Contributed to the **NRP open-source codebase** (Python / C++ / ROS), particularly on the robotic side &mdash; Gazebo integration, hardware-in-the-loop with the NRP, transfer-learning utilities.
+- Deployed [Tigrillo]({{ '/articles/tigrillodev/' | relative_url }}) on the NRP as a **reference platform** for closed-loop experiments with spiking CPGs.
+- Acted as a practical &ldquo;user&rdquo; during integration phases: reporting bugs, **shaping the Python user API**, and **co-running tutorials** with the core platform team (TUM, Fortiss, SSSA, KTH).
+
+The platform has since evolved and now lives on the [EBRAINS](https://ebrains.eu/) infrastructure.
+
+## Education and community
+
+Research consortiums of that size live and die on their education and community programmes. I was elected **Student Representative at the HBP Education Programme Committee** (a mandate that ran until May 2020), representing ~150 HBP-funded PhDs across Europe in strategic discussions about schools, grants and workshops. Beyond the day-to-day science, I organised, chaired or contributed to a steady stream of HBP events:
+
+- **Pisa, Jan 2020** &mdash; scientific chair of the *4th HBP Student Conference*.
+- **Belgrade, Jul 2019** &mdash; chair and committee member of the *HBP Young Researcher Event*.
+- **Ghent, Feb 2019** &mdash; host and scientific chair of the *3rd HBP Student Conference*.
+- **Stockholm, May 2018** &mdash; technical demonstration and lightning talk at the *HBP SGA1 European Review*.
+- **Tokyo, Apr 2018** &mdash; presentation at the *Europe&ndash;Japan Neurorobotics Workshop*.
+- **Brussels, Nov 2017** &mdash; demonstration at the *European Robotics Week 2017*.
+- **Obergurgl &amp; Manchester (2016&ndash;2017)** &mdash; lightning talks and posters at the *HBP Schools on the Future of Neuroscience, AI and Computing*.
+
 
 ## Going further
 
-- Neurorobotics Platform homepage: [neurorobotics.net](https://neurorobotics.net/).
-- EBRAINS &mdash; where HBP tools live today: [ebrains.eu](https://ebrains.eu/).
-- My PhD thesis: [Biologically inspired locomotion of compliant robots](https://biblio.ugent.be/publication/8720560), UGent, 2021.
+- Full PhD thesis: [Biologically inspired locomotion of compliant robots](https://biblio.ugent.be/publication/8720560), UGent, 2020.
+- Home group: [AIRO @ IDLab &mdash; Ghent University, imec](https://airo.ugent.be).
+- Neurorobotics Platform: [neurorobotics.net](https://neurorobotics.net/) (now hosted on [EBRAINS](https://ebrains.eu/)).
