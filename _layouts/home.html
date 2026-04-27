@@ -140,9 +140,7 @@ layout: default
               endif %}</div>
             <h3 class="article-card__title"><a href="{{ a.url | relative_url }}">{{ a.title }}</a></h3>
             {% if a.subtitle %}<p class="article-card__excerpt">{{ a.subtitle }}</p>{% endif %}
-            <div class="article-card__tags">
-              {% for t in a.tags %}<span class="tag-chip">{{ t }}</span>{% endfor %}
-            </div>
+
           </div>
         </article>
         {% endfor %}

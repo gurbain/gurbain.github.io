@@ -1,4 +1,4 @@
-title: Gabriel Urbain
+title: Gabriel Urbain&rsquo;s research blog
 tagline: Consultant in Robotics &amp; AI
 description: >-
   PhD in AI and Robotics, founder of RBAI, 5+ years of startup engineering.
@@ -32,6 +32,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Keep GH verification file and CNAME as passthrough
 keep_files:
